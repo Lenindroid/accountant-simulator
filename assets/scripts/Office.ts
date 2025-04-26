@@ -1,4 +1,4 @@
-import { _decorator, Button, Component, JsonAsset, Label, Node, resources } from 'cc';
+import { _decorator, Button, Component, director, JsonAsset, Label, Node, resources } from 'cc';
 import { Location } from './Location';
 const { ccclass, property } = _decorator;
 
@@ -157,8 +157,13 @@ export class Office extends Component {
         type: Node,
         tooltip: 'Good ending'
     })
-    private goodEnding;
+    private goodEnding : Node;
 
+    @property({
+        type: Node,
+        tooltip: 'Try again button'
+    })
+    private tryAgainButton : Node;
 
     private accounts : Label[] = [];
     private debits : Label[] = [];
@@ -254,12 +259,17 @@ export class Office extends Component {
         this.paperworkNode.getComponent(Button).interactable = false;
 
         if (this.good > this.bad) {
-            console.log('Papá no hace eso')
+            this.badEndingOne.active = true;
         } else if (this.good < this.bad) {
-            console.log('No te soporto más')
+            this.badEndingTwo.active = true;
         } else {
-            console.log('A tiempo para los penaltis')
+            this.goodEnding.active = true;
         }
+
+        this.scheduleOnce(()=> {
+            this.tryAgainButton.active = true;
+            return
+        }, 1);
     }
 
     firstOption() {
@@ -371,6 +381,10 @@ export class Office extends Component {
         }
     }
 
+    reloadScene() {
+        director.loadScene('scene');
+    }
+    
     update(deltaTime: number) {
         
     }
