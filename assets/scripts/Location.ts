@@ -264,6 +264,7 @@ export class Location extends Component {
     
     goToOffice() {
         this.changeLocation('office');
+        this.dialogScript.diplayDialog();
     }
     
 }

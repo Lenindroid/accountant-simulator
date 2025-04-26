@@ -2,7 +2,6 @@
     {
         "id": "intro",
         "location": "living-room",
-        "requiredStats": {},
         "lines": [
             {
                 "order": 1,
@@ -105,6 +104,121 @@
                 "image": "characters/dialog/son-false-moustache/spriteFrame",
                 "speaker": "Son",
                 "line": "Ok, dad. I'll try to do my best."
+            }
+        ]
+    },
+    {
+        "id": "office-intro",
+        "location": "office",
+        "lines": [
+            {
+                "order": 1,
+                "image": "characters/dialog/son-false-moustache/spriteFrame",
+                "speaker": "Mr. Circle",
+                "line": "Working during a Barça-Madrid should be considered a war crime. Don't you think, boss?"
+            },
+
+            {
+                "order": 2,
+                "image": "characters/dialog/boss/spriteFrame",
+                "speaker": "Boss",
+                "line": "You could ben home watching the game if you hadn't messed up so badly on the last General Journal."
+            },
+            {
+                "order": 3,
+                "image": "characters/dialog/boss/spriteFrame",
+                "speaker": "Boss",
+                "line": "Fix your mess and you're free to go."
+            },
+            {
+                "order": 4,
+                "image": "characters/dialog/son-false-moustache/spriteFrame",
+                "speaker": "Mr. Circle",
+                "line": "(Oh, dad. What have you gotten me into this time?)"
+            }
+        ]
+    }, 
+    {
+        "id": "office-tutorial",
+        "location": "office",
+        "lines": [
+            {
+                "order": 1,
+                "image": "characters/dialog/phone/spriteFrame",
+                "speaker": "Phone",
+                "line": "RING RING RINGGGGGGGGGG!!!"
+            },
+            {
+                "order": 2,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Champ, you'll never guess who just had scored?"
+            },
+            {
+                "order": 3,
+                "image": "characters/dialog/son-false-moustache/spriteFrame",
+                "speaker": "Mr. Circle",
+                "line": "Dad, I don't have time for this. I'm busy doing YOUR WORK."
+            },
+            {
+                "order": 4,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Hey, take it easy, kiddo."
+            },
+            {
+                "order": 5,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "I'm calling you beacuase I just remembered why I had extra work."
+            },
+            {
+                "order": 6,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "The boss probably asked you to fix my mistakes on the General Journal."
+            },
+            {
+                "order": 7,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Look in accounting there's a thing we call the rule of double entry.."
+            },
+            {
+                "order": 8,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "It means that for every debit, there's a credit."
+            },
+            {
+                "order": 9,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Think of it like a seesaw, everything has to be balanced."
+            },
+            {
+                "order": 10,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "If the totals don't match, you probably messed something up."
+            },
+            {
+                "order": 11,
+                "image": "characters/dialog/tv/spriteFrame",
+                "speaker": "T.V.",
+                "line": "And here comes Lamine Yamal!"
+            },
+            {
+                "order": 12,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Gotta go, champ. Good luck!"
+            },
+            {
+                "order": 13,
+                "image": "characters/dialog/system/spriteFrame",
+                "speaker": "System",
+                "line": "You heard the boss. Click on the stack of papers to get started."
             }
         ]
     }

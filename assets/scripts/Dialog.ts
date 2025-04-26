@@ -12,7 +12,6 @@ interface DialogLine {
 interface DialogObject {
     id: string;
     location: string;
-    requiredStats: object;
     lines: DialogLine[];
 }
 
