@@ -18,6 +18,8 @@ interface JournalEntry {
 export class Office extends Component {
 
     private journalIndex : number = 0;
+    public good : number = 0;
+    public bad : number = 0;
 
     @property({
         type: Node,
@@ -139,6 +141,25 @@ export class Office extends Component {
     })
     private totalDebit : Label;
 
+    @property({
+        type: Node,
+        tooltip: 'Bad ending one'
+    })
+    private badEndingOne : Node;
+
+    @property({
+        type: Node,
+        tooltip: 'Bad ending two'
+    })
+    private badEndingTwo : Node;
+
+    @property({
+        type: Node,
+        tooltip: 'Good ending'
+    })
+    private goodEnding;
+
+
     private accounts : Label[] = [];
     private debits : Label[] = [];
     private credits : Label[] = [];
@@ -231,106 +252,123 @@ export class Office extends Component {
     public finishPaperWork() : void {
         this.generalJournal.active = false;
         this.paperworkNode.getComponent(Button).interactable = false;
+
+        if (this.good > this.bad) {
+            console.log('Papá no hace eso')
+        } else if (this.good < this.bad) {
+            console.log('No te soporto más')
+        } else {
+            console.log('A tiempo para los penaltis')
+        }
     }
 
     firstOption() {
-        if (this.journals[this.journalIndex].missingDebitOptionIndex == 0 || this.journals[this.journalIndex].missingCreditOptionIndex == 0) {
 
-            if(this.journals[this.journalIndex].missingCreditIndex != -1) {
-                this.credits[this.journals[this.journalIndex].missingCreditIndex].node.active = true;
-            }
-    
-            if(this.journals[this.journalIndex].missingDebitIndex != -1) {
-                this.debits[this.journals[this.journalIndex].missingDebitIndex].node.active = true;
-            }
-
-            this.totalCredit.string = this.journals[this.journalIndex].credits.reduce((accum, current)=> {
-                return accum + current;
-            }, 0).toString();
-    
-            this.totalDebit.string = this.journals[this.journalIndex].debits.reduce((accum, current)=> {
-                return accum + current;
-            }, 0).toString();
-
-            this.scheduleOnce(()=> {
-                if(this.journalIndex == this.journals.length - 1) {
-                    this.finishPaperWork()
-                    return;
-                }
-                this.journalIndex++;
-                this.updatePaperWork(this.journalIndex);
-                return
-            }, 0.3);
+        if(this.journals[this.journalIndex].missingCreditIndex != -1) {
+            this.credits[this.journals[this.journalIndex].missingCreditIndex].string = this.journals[this.journalIndex].options[0].toString();
+            this.credits[this.journals[this.journalIndex].missingCreditIndex].node.active = true;
         }
 
-        console.log('MAAAL');
+        if(this.journals[this.journalIndex].missingDebitIndex != -1) {
+            this.debits[this.journals[this.journalIndex].missingDebitIndex].string = this.journals[this.journalIndex].options[0].toString();
+            this.debits[this.journals[this.journalIndex].missingDebitIndex].node.active = true;
+        }
+
+        this.totalCredit.string = this.journals[this.journalIndex].credits.reduce((accum, current)=> {
+            return accum + current;
+        }, 0).toString();
+
+        this.totalDebit.string = this.journals[this.journalIndex].debits.reduce((accum, current)=> {
+            return accum + current;
+        }, 0).toString();
+
+        this.scheduleOnce(()=> {
+            if(this.journalIndex == this.journals.length - 1) {
+                this.finishPaperWork()
+                return;
+            }
+            this.journalIndex++;
+            this.updatePaperWork(this.journalIndex);
+            return
+        }, 0.3);
+
+        if (this.journals[this.journalIndex].missingDebitOptionIndex == 0 || this.journals[this.journalIndex].missingCreditOptionIndex == 0) {
+            this.good++;
+        } else {
+            this.bad++;
+        }
     }
 
     secondOption() {
-
-        if (this.journals[this.journalIndex].missingDebitOptionIndex == 1 || this.journals[this.journalIndex].missingCreditOptionIndex == 1) {
-            if (this.journals[this.journalIndex].missingDebitIndex != -1) {
-                this.debits[this.journals[this.journalIndex].missingDebitIndex].node.active = true;
-            }
-    
-            if (this.journals[this.journalIndex].missingCreditIndex != -1) {
-                this.credits[this.journals[this.journalIndex].missingCreditIndex].node.active = true;
-            }
-    
-            this.totalCredit.string = this.journals[this.journalIndex].credits.reduce((accum, current)=> {
-                return accum + current;
-            }, 0).toString();
-    
-            this.totalDebit.string = this.journals[this.journalIndex].debits.reduce((accum, current)=> {
-                return accum + current;
-            }, 0).toString();
-
-            this.scheduleOnce(()=> {
-                if(this.journalIndex == this.journals.length - 1) {
-                    this.finishPaperWork()
-                    return;
-                }
-                this.journalIndex++;
-                this.updatePaperWork(this.journalIndex);
-                return
-            }, 0.3);
-
+        if (this.journals[this.journalIndex].missingDebitIndex != -1) {
+            this.debits[this.journals[this.journalIndex].missingDebitIndex].string = this.journals[this.journalIndex].options[1].toString();
+            this.debits[this.journals[this.journalIndex].missingDebitIndex].node.active = true;
         }
 
-        console.log('MAAAL');
+        if (this.journals[this.journalIndex].missingCreditIndex != -1) {
+            this.credits[this.journals[this.journalIndex].missingCreditIndex].string = this.journals[this.journalIndex].options[1].toString();
+            this.credits[this.journals[this.journalIndex].missingCreditIndex].node.active = true;
+        }
+
+        this.totalCredit.string = this.journals[this.journalIndex].credits.reduce((accum, current)=> {
+            return accum + current;
+        }, 0).toString();
+
+        this.totalDebit.string = this.journals[this.journalIndex].debits.reduce((accum, current)=> {
+            return accum + current;
+        }, 0).toString();
+
+        this.scheduleOnce(()=> {
+            if(this.journalIndex == this.journals.length - 1) {
+                this.finishPaperWork()
+                return;
+            }
+            this.journalIndex++;
+            this.updatePaperWork(this.journalIndex);
+            return
+        }, 0.3);
+
+        if (this.journals[this.journalIndex].missingDebitOptionIndex == 1 || this.journals[this.journalIndex].missingCreditOptionIndex == 1) {
+            this.good++;
+        } else {
+            this.bad++;
+        }
     }
 
     thirdOption() {
-        if (this.journals[this.journalIndex].missingDebitOptionIndex == 2 || this.journals[this.journalIndex].missingCreditOptionIndex == 2) {
-
-            if (this.journals[this.journalIndex].missingDebitIndex != -1) {
-                this.debits[this.journals[this.journalIndex].missingDebitIndex].node.active = true;
-            }
-
-            if (this.journals[this.journalIndex].missingCreditIndex != -1) {
-                this.credits[this.journals[this.journalIndex].missingCreditIndex].node.active = true;
-            }
-
-            this.totalCredit.string = this.journals[this.journalIndex].credits.reduce((accum, current)=> {
-                return accum + current;
-            }, 0).toString();
-    
-            this.totalDebit.string = this.journals[this.journalIndex].debits.reduce((accum, current)=> {
-                return accum + current;
-            }, 0).toString();
-
-            this.scheduleOnce(()=> {
-                if(this.journalIndex == this.journals.length - 1) {
-                    this.finishPaperWork();
-                    return;
-                }
-                this.journalIndex++;
-                this.updatePaperWork(this.journalIndex);
-                return
-            }, 0.3);
+        if (this.journals[this.journalIndex].missingDebitIndex != -1) {
+            this.debits[this.journals[this.journalIndex].missingDebitIndex].string = this.journals[this.journalIndex].options[2].toString();
+            this.debits[this.journals[this.journalIndex].missingDebitIndex].node.active = true;
         }
 
-        console.log('MAAAL');
+        if (this.journals[this.journalIndex].missingCreditIndex != -1) {
+            this.credits[this.journals[this.journalIndex].missingCreditIndex].string = this.journals[this.journalIndex].options[2].toString();
+            this.credits[this.journals[this.journalIndex].missingCreditIndex].node.active = true;
+        }
+
+        this.totalCredit.string = this.journals[this.journalIndex].credits.reduce((accum, current)=> {
+            return accum + current;
+        }, 0).toString();
+
+        this.totalDebit.string = this.journals[this.journalIndex].debits.reduce((accum, current)=> {
+            return accum + current;
+        }, 0).toString();
+
+        this.scheduleOnce(()=> {
+            if(this.journalIndex == this.journals.length - 1) {
+                this.finishPaperWork();
+                return;
+            }
+            this.journalIndex++;
+            this.updatePaperWork(this.journalIndex);
+            return
+        }, 0.3);
+
+        if (this.journals[this.journalIndex].missingDebitOptionIndex == 2 || this.journals[this.journalIndex].missingCreditOptionIndex == 2) {
+            this.good++;
+        } else {
+            this.bad++;
+        }
     }
 
     update(deltaTime: number) {

@@ -1,23 +1,32 @@
 [
     {
-        "accounts": ["Cash", "Banks", "       Cash", "       Cash"],
-        "credits": [5000, 20000, 0, 0],
-        "debits": [0, 0, 20000, 5000],
-        "missingDebitOptionIndex": 0,
+        "accounts": ["Cash", "Banks", "       Loans", "       Payables"],
+        "credits": [3000, 7000, 0, 0],
+        "debits": [0, 0, 7000, 3000],
+        "missingDebitOptionIndex": 1,
         "missingDebitIndex": 3,
         "missingCreditOptionIndex": -1,
         "missingCreditIndex": -1,
-        "options": [5000, 6363, 666]
-
+        "options": [2500, 3000, 3500]
     },
     {
-        "accounts": ["Banks", "Cash", "       Cash", "       Banks"],
-        "credits": [50000, 500, 0, 0],
-        "debits": [0, 0, 250, 50250],
+        "accounts": ["Equipment", "Cash", "       Debt", "       Payables"],
+        "credits": [12000, 3000, 0, 0],
+        "debits": [0, 0, 2000, 13000],
         "missingDebitOptionIndex": -1,
         "missingDebitIndex": -1,
-        "missingCreditOptionIndex": 2,
+        "missingCreditOptionIndex": 0,
         "missingCreditIndex": 0,
-        "options": [5, 500, 50000]
+        "options": [10000, 12000, 15000]
+    },
+    {
+        "accounts": ["Inventory", "Cash", "       Credit", "       Payables"],
+        "credits": [1500, 500, 0, 0],
+        "debits": [0, 0, 500, 1500],
+        "missingDebitOptionIndex": 0,
+        "missingDebitIndex": 2,
+        "missingCreditOptionIndex": -1,
+        "missingCreditIndex": -1,
+        "options": [500, 1000, 1500]
     }
 ]
