@@ -28,5 +28,16 @@
         "missingCreditOptionIndex": -1,
         "missingCreditIndex": -1,
         "options": [500, 1000, 1500]
+    },
+    {
+        "accounts": ["Supplies", "Cash", "       Payables", "       Debt"],
+        "credits": [4000, 2000, 0, 0],
+        "debits": [0, 0, 2000, 4000],
+        "missingDebitOptionIndex": -1,
+        "missingDebitIndex": -1,
+        "missingCreditOptionIndex": 1,
+        "missingCreditIndex": 1,
+        "options": [1500, 2000, 2500]
     }
+    
 ]
