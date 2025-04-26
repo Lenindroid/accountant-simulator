@@ -2,6 +2,7 @@ import { _decorator, Button, Component, JsonAsset, Label, Node, resources, Sprit
 import { ProgressDisplayController } from './ProgressDisplayController';
 import { PlayerStats } from './PlayerStats';
 import { Office } from './Office';
+import { Dialog } from './Dialog';
 const { ccclass, property } = _decorator;
 
 type LocationButtonData = {
@@ -31,11 +32,7 @@ interface RequiredStats {
 interface Room {
     id: string;
     locked: boolean;
-    image: {
-        morning: string;
-        afternoon: string;
-        night: string;
-    };
+    image: string;
     dialogs: DialogReference[];
     requiredStats : RequiredStats;
 }
@@ -75,6 +72,13 @@ export class Location extends Component {
     })
     private playerStatsNode : Node;
     private playerStatsScript : PlayerStats;
+
+    @property({
+        type: Node,
+        tooltip: 'Dialogs script node'
+    })
+    private dialogNode : Node;
+    private dialogScript : Dialog;
 
     @property({
         type: Node,
@@ -140,6 +144,7 @@ export class Location extends Component {
         this.progressScript = this.progressNode.getComponent(ProgressDisplayController);
         this.playerStatsScript = this.playerStatsNode.getComponent(PlayerStats);
         this.officeScript = this.officeNode.getComponent(Office);
+        this.dialogScript = this.dialogNode.getComponent(Dialog);
     }
 
     update(deltaTime: number) {
@@ -226,7 +231,7 @@ export class Location extends Component {
                 if(element.id == id) this.location = element;
             });
 
-            let roomPath : string = this.location.image[this.progressScript.getTimeOfDay(this.progressScript.clock)];
+            let roomPath : string = this.location.image;
 
             resources.load(roomPath, SpriteFrame, (err, spriteFrame)=> {
                 if (err) {
@@ -252,8 +257,9 @@ export class Location extends Component {
         this.changeLocation('kitchen');
     }
     
-    goToLivingRoom() {
+    public goToLivingRoom() : void {
         this.changeLocation('living-room');
+        this.dialogScript.diplayDialog();
     }
     
     goToOffice() {

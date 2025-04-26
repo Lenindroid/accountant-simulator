@@ -1,32 +1,110 @@
 [
     {
         "id": "intro",
-        "location": "bedroom",
+        "location": "living-room",
         "requiredStats": {},
         "lines": [
             {
                 "order": 1,
                 "image": "characters/dialog/father-neutral/spriteFrame",
                 "speaker": "Father",
-                "line": "Peraphs is time to wake up"
+                "line": "Hala madrid!"
             },
             {
                 "order": 2,
-                "image": "characters/dialog/system/spriteFrame",
-                "speaker": "Clock",
-                "line": "Coo coo coo"
+                "image": "characters/dialog/SonNormal/spriteFrame",
+                "speaker": "Son",
+                "line": "Visca el Barça!"
             },
             {
                 "order": 3,
-                "image": "characters/dialog/system/spriteFrame",
-                "speaker": "Yo",
-                "line": "LOS TOMATES DICEN NOO SEEEEE"
+                "image": "characters/dialog/SonNormal/spriteFrame",
+                "speaker": "Son",
+                "line": "I think this year we might win the treble this year again."
             },
             {
                 "order": 4,
                 "image": "characters/dialog/father-neutral/spriteFrame",
-                "speaker": "Yo",
-                "line": "LAS LENTEJAS DICEN PENDEJAA"
+                "speaker": "Father",
+                "line": "No, Madrid is going to win it."
+            },
+            {
+                "order": 5,
+                "image": "characters/dialog/SonNormal/spriteFrame",
+                "speaker": "Son",
+                "line": "Impossible, you were beaten by Arsenal."
+            },
+            {
+                "order": 6,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Today we'll win the cup, then the league and finally the Club World Cup."
+            },
+            {
+                "order": 7,
+                "image": "characters/dialog/SonNormal/spriteFrame",
+                "speaker": "Son",
+                "line": "Dad, you're so hilarious when we watch football."
+            },
+            {
+                "order": 8,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Oh, not again."
+            },
+            {
+                "order": 9,
+                "image": "characters/dialog/SonNormal/spriteFrame",
+                "speaker": "Son",
+                "line": "Have you already accepted that you'll get trashed again?"
+            },
+            {
+                "order": 10,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Oh shoot, I forgot my boss scheduled me to work this Saturday."
+            },
+            {
+                "order": 11,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Champ, I need you to go for me again. I can't miss this final."
+            },
+            {
+                "order": 12,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "I'm sure we lost last time because of my absence."
+            },
+            {
+                "order": 13,
+                "image": "characters/dialog/SonNormal/spriteFrame",
+                "speaker": "Son",
+                "line": "Dad! I'm sure this time I'm going to get caught."
+            },
+            {
+                "order": 14,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Don't worry, you'll do fine."
+            },
+            {
+                "order": 15,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "Just remember to wear the fake mustache."
+            },
+            {
+                "order": 16,
+                "image": "characters/dialog/father-neutral/spriteFrame",
+                "speaker": "Father",
+                "line": "And above all, remember to work like your old man would."
+            },
+            {
+                "order": 17,
+                "image": "characters/dialog/son-false-moustache/spriteFrame",
+                "speaker": "Son",
+                "line": "Ok, dad. I'll try to do my best."
             }
         ]
     }

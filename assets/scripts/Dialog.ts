@@ -55,8 +55,10 @@ export class Dialog extends Component {
     public progressNode : Node;
 
     public currentLine : number = 0;
+    public dialogIndex : number = 0;
 
     private currentDialog : DialogObject;
+    private dialogsJSON : DialogObject;
 
     start() {
         resources.load('data/dialogs', JsonAsset, (err, data) => {
@@ -64,10 +66,14 @@ export class Dialog extends Component {
                 console.error('There was an error while trying to access to the dialogs:', err);
                 return;
             }
-            const dialogsJSON = data.json;
-            this.currentDialog = dialogsJSON[0];
-            this.updateDialogBox(this.currentDialog.lines[this.currentLine]);
+            this.dialogsJSON = data.json as DialogObject;
+            this.currentDialog = this.dialogsJSON[0];
         })
+    }
+
+    public diplayDialog() {
+        this.dialogNode.active = true;
+        this.updateDialogBox(this.currentDialog.lines[this.currentLine]);
     }
 
     updateDialogBox(line: DialogLine) {
@@ -90,6 +96,7 @@ export class Dialog extends Component {
     continuePressed() {
         if (this.currentLine + 1  == this.currentDialog.lines.length) {
             this.dialogNode.active = false;
+            this.currentDialog = this.dialogsJSON[this.dialogIndex + 1];
         } else {
             this.currentLine++;
             this.updateDialogBox(this.currentDialog.lines[this.currentLine]);

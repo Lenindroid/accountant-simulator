@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3023.6221"
+   height="3023.6221"
+   viewBox="0 0 1219.435 1219.435"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.2447271"
+     inkscape:cx="1199.2951"
+     inkscape:cy="1460.8109"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="1591"
+     inkscape:window-y="121"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="825.40921"
+       y="2088.0401"
+       width="1160.4763"
+       height="567.9796"
+       id="rect6" />
+    <rect
+       x="874.44342"
+       y="1887.8171"
+       width="1466.8238"
+       height="260.96913"
+       id="rect3" />
+    <rect
+       x="53.120395"
+       y="392.27368"
+       width="2504.8309"
+       height="1152.3039"
+       id="rect2" />
+    <rect
+       x="510.77302"
+       y="543.4625"
+       width="2459.8829"
+       height="984.77039"
+       id="rect1" />
+    <rect
+       x="874.44342"
+       y="1887.8171"
+       width="1466.8238"
+       height="260.96913"
+       id="rect5" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.92148621,0,0,1.27217,-760.229,-2116.9968)"
+       id="text2"
+       style="font-size:176.244px;white-space:pre;shape-inside:url(#rect3);shape-padding:5.05831;fill:#000041;fill-opacity:1;stroke:#ffcc00;stroke-width:0.999563;stroke-dasharray:none;stroke-opacity:0"><tspan
+         x="879.50195"
+         y="2053.6677"
+         id="tspan2"><tspan
+           style="font-weight:bold;font-family:Arial;-inkscape-font-specification:'Arial, Bold';fill:#d45500"
+           id="tspan1">ACCOUNTANT</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.92148621,0,0,1.27217,-671.66695,-1907.2446)"
+       id="text5"
+       style="font-size:176.244px;white-space:pre;shape-inside:url(#rect5);shape-padding:5.05831;fill:#000041;fill-opacity:1;stroke:#ffcc00;stroke-width:0.999563;stroke-dasharray:none;stroke-opacity:0"><tspan
+         x="879.50195"
+         y="2053.6677"
+         id="tspan4"><tspan
+           style="font-weight:bold;font-family:Arial;-inkscape-font-specification:'Arial, Bold';fill:#000000"
+           id="tspan3">SIMULATOR</tspan></tspan></text>
+    <path
+       style="fill:#ffd611;fill-opacity:1;fill-rule:evenodd;stroke-width:0.471379"
+       id="path5"
+       sodipodi:type="arc"
+       sodipodi:cx="908.03033"
+       sodipodi:cy="627.05219"
+       sodipodi:rx="44.495872"
+       sodipodi:ry="70.038704"
+       sodipodi:start="3.1540657"
+       sodipodi:end="3.1263072"
+       sodipodi:arc-type="arc"
+       d="m 863.53792,626.17861 a 44.495872,70.038704 0 0 1 44.73863,-69.16406 44.495872,70.038704 0 0 1 44.24961,69.93915 44.495872,70.038704 0 0 1 -44.12447,70.13475 44.495872,70.038704 0 0 1 -44.86203,-68.96573"
+       sodipodi:open="true" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.13214326,0,0,0.15777679,761.79764,251.90001)"
+       id="text6"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:473.151px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect6);fill:#ffd611;fill-opacity:1;stroke:#ffcc00;stroke-width:2.68346;stroke-dasharray:none;stroke-opacity:0"><tspan
+         x="825.41016"
+         y="2514.2319"
+         id="tspan7"><tspan
+           style="fill:#000000"
+           id="tspan5">$5</tspan></tspan></text>
+  </g>
+</svg>
