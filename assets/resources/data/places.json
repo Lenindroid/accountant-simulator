@@ -26,11 +26,7 @@
     {
         "id": "office",
         "locked": false,
-        "image": {
-            "morning": "backgrounds/Office/spriteFrame",
-            "afternoon": "backgrounds/Office/spriteFrame",
-            "night": "backgrounds/Office/spriteFrame"
-        },
+        "image": "backgrounds/Office/spriteFrame",
         "dialogs": [
             {
                 "id": "intro",

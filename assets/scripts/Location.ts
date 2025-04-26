@@ -239,7 +239,6 @@ export class Location extends Component {
                     return;
                 }
                 this.backgroundImageSprite.spriteFrame = spriteFrame;
-                if (id == 'office') this.officeScript.showPaperWork();
             });
         });
     }
