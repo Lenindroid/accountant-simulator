@@ -1,0 +1,41 @@
+[
+    {
+        "id": "first-decision",
+        "location": "bedroom",
+        "hour": 6,
+        "minute": 0,
+        "question": "Would you like to wait for your son to wake up?",
+        "firstOption": "Yes",
+        "secondOption": "No",
+        "firstOptionStats": {
+            "family": 10,
+            "work": -20,
+            "money": 0
+        },
+        "secondOptionStats": {
+            "family": -20,
+            "work": 5,
+            "money": 10
+        }
+    },
+
+    {
+        "id": "peku-decision",
+        "location": "internet",
+        "hour": 10,
+        "minute": 12,
+        "question": "Would you like to say 'peku' to Nancy?",
+        "firstOption": "Obvio microbio",
+        "secondOption": "Nel pastel",
+        "firstOptionStats": {
+            "family": 30,
+            "work": 10,
+            "money": 1000
+        },
+        "secondOptionStats": {
+            "family": -50,
+            "work": 30,
+            "money": -10
+        }
+    }
+]

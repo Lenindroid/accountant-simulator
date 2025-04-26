@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "dbda9db0-e07c-40b8-be69-7f9e159f9e04",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "dbda9db0-e07c-40b8-be69-7f9e159f9e04@6c48a",
+      "displayName": "DialogButton",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "dbda9db0-e07c-40b8-be69-7f9e159f9e04",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "dbda9db0-e07c-40b8-be69-7f9e159f9e04@f9941",
+      "displayName": "DialogButton",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 9.5,
+        "offsetY": 1,
+        "trimX": 67,
+        "trimY": 20,
+        "width": 885,
+        "height": 158,
+        "rawWidth": 1000,
+        "rawHeight": 200,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -442.5,
+            -79,
+            0,
+            442.5,
+            -79,
+            0,
+            -442.5,
+            79,
+            0,
+            442.5,
+            79,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            67,
+            180,
+            952,
+            180,
+            67,
+            22,
+            952,
+            22
+          ],
+          "nuv": [
+            0.067,
+            0.11,
+            0.952,
+            0.11,
+            0.067,
+            0.9,
+            0.952,
+            0.9
+          ],
+          "minPos": [
+            -442.5,
+            -79,
+            0
+          ],
+          "maxPos": [
+            442.5,
+            79,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "dbda9db0-e07c-40b8-be69-7f9e159f9e04@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "dbda9db0-e07c-40b8-be69-7f9e159f9e04@6c48a"
+  }
+}
